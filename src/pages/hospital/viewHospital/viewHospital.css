@@ -1,0 +1,115 @@
+ .view-hospital-wrapper{
+    width:100vw;
+    height:100vh;
+    overflow-x: hidden;
+}
+.Hos-Main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 1px 1px 3px 1px rgb(194, 194, 194);
+    width: 700px;
+    padding-bottom: 40px;
+  }
+  
+  .totalbeds-card {
+    color: var(--color3);
+  }
+  .available-card {
+    color: green;
+  }
+  .logo-style {
+    height: 18px;
+    padding-right: 5px;
+    margin-top: 3px;
+  }
+  
+  .rate-button {
+    width: 60px;
+    height: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(225, 225, 225);
+    box-shadow: 1px 1px 3px 1px rgb(194, 194, 194);
+  }
+  .rate-button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  .review-display-area {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  .review-display-card {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    position: relative;
+  }
+  .review-display-card:hover {
+    transform: scale(1.1);
+  }
+  .user-style-card {
+    border: 1px solid white;
+    width: 500px;
+    padding: 10px;
+    box-shadow: 1px 1px 3px 1px rgb(194, 194, 194);
+  }
+  .review-textarea-card {
+    text-align: center;
+    padding-top: 40px;
+  }
+  .adjustment-btn{
+    width:290px;
+    height: 45px;
+  }
+  .rate-us-card1 {
+    color: white;
+    width: 290px;
+    height: 45px;
+    font-size: 15px;
+    background-color: var(--color2);
+    box-shadow: 1px 1px 3px 1px var(--color2);
+    border: 1px solid var(--color2);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .rate-us-card1:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    color: var(--color2);
+    background-color: rgb(0, 0, 0);
+  }
+  .contactbut {
+    margin-top: 80px;
+    background: var(--color1);
+    padding: 5px;
+    border-radius: 4px;
+    width: 300px;
+    margin-left: 190px;
+  }
+  .contactbut a {
+    color: white;
+    text-decoration: none;
+  }
+  .contactbut:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  .dashboard-main {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    border: 3px solid black;
+    width: 700px;
+  }
+  .user-profile-pic {
+    width: 100px;
+    height: 100px;
+    border: 1px solid white;
+    border-radius: 100px;
+  }

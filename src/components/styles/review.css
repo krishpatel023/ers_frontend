@@ -1,0 +1,23 @@
+/* .review-display-area {
+    margin-top: 160px;
+    margin-bottom: 160px;
+  } */
+  .review-display-card {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    position: relative;
+  }
+  .review-display-card:hover {
+    transform: scale(1.1);
+  }
+  .user-style-card {
+    border: 1px solid white;
+    width: 500px;
+    padding: 10px;
+    box-shadow: 1px 1px 3px 1px rgb(194, 194, 194);
+  }
+  .review-textarea-card {
+    text-align: center;
+    padding-top: 40px;
+  }

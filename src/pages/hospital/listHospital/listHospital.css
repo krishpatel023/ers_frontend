@@ -1,0 +1,86 @@
+:root{
+    --color1:#002A5C;
+    --color2:#001228;
+    --color3:#347BB7;
+
+}
+.list-hospital-wrapper{
+    max-width:100vw;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+.list-hospital-header{
+    width:100%;
+    /* border: 1px solid red; */
+}
+.list-hospital-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+    height:40vh;
+    margin-top: 5rem;
+}
+.list-hospital-box{
+    border: 1px solid rgb(184, 184, 184);
+    font-family: sans-serif;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5%;
+    width: 50%;
+    height:100%;
+    box-shadow: 3px 3px 10px 2px rgb(176, 174, 174);
+}
+.cls1{
+    width:30%;
+    height:80%;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.cls1 img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.cls2{
+    width:60%;
+    height:80%;
+    /* border: 2px solid red; */
+}
+.cls2 .hosname{
+    color: var(--color1);
+    font-size: 2rem;
+}
+.cls2 .location{
+    font-size: 20px;
+}
+.cls2 .address{
+    font-size: 15px;
+}
+.cls2 .contactbut1{
+    margin-top: 24px;
+    background: var(--color1);
+    padding: 5px;
+    width: fit-content;
+    border-radius: 4px;
+}
+.cls2 .contactbut1 a {
+    color: white;
+    text-decoration: none;
+}
+.cls2 .contactbut1:hover{
+    cursor: pointer; 
+    transform:scale(1.1);
+}
+
+@media only screen and (max-width: 1000px) {
+    .list-hospital-box {
+      width:80%;
+    }
+}

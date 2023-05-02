@@ -1,0 +1,164 @@
+.admin-edit-hospital-loading{
+    height:100%;
+    width:80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.admin-edit-hospitals-panel-wrapper{
+    width:100vw;
+    height:100vh;
+    overflow-y: hidden;
+    display: flex;
+}
+.admin-edit-hospitals-panel-navbar{
+    width:20vw;
+    height:100vh;
+    border:2px solid black;
+}
+.admin-edit-hospitals-panel-detail{
+    width:80vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.admin-edit-hospitals-panel-detail-wrapper{
+    width:40%;
+    height:85%;
+    border: 2px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.edit-hospital-input-details-1,
+.edit-hospital-input-details-2,
+.edit-hospital-input-details-3,
+.edit-hospital-input-details-4{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.edit-hospital-input-details-1{
+    max-height:30%;
+    
+}
+.edit-hospital-input-details-1 img{
+    height:80%;
+}
+.edit-hospital-input-details-2{
+    height:50%;
+    flex-direction: column;
+    gap: 10%;
+}
+.edit-hospital-input-details-2 input{
+    width:80%;
+    height:15%;
+    padding: 5%;
+}
+.edit-hospital-input-details-3{
+    height: 20%;
+    flex-direction: column;
+    gap:20%;
+}
+/* .edit-hospital-input-details-3 input{
+    width:80%;
+    height:15%;
+    padding: 5%;
+} */
+.edit-hospital-input-details-4{
+    height: 15%;
+    gap: 10%;
+}
+.edit-hospital-input-details-4 button{
+    width: 30%;
+    height: 50%;
+}
+.edit-hospital-input-edit-btn{
+    background-color: rgb(69, 97, 209);
+}
+.edit-hospital-input-edit-btn:hover{
+    background-color: rgb(142, 159, 208);
+}
+.edit-hospital-input-delete-btn{
+    background-color: rgb(237, 66, 66);
+}
+.edit-hospital-input-delete-btn:hover{
+    background-color: rgb(251, 124, 124);
+}
+/* .trial{
+    width:80vw;
+    height:100vh;
+    position:relative;
+} */
+/* REACT EDITS */
+.admin-deleted-wrapper{
+    width:80vw;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-left: 20vw;
+    z-index: 100;
+    
+}
+.admin-delete-popup{
+    width:50%;
+    height:30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    z-index: 1000;
+    background-color: rgb(254, 155, 155);
+}
+.admin-delete-popup button{
+    width:20%;
+    height:15%;
+    background-color: rgb(31, 105, 201);
+    border: none;
+    border-radius: 0.5rem;
+}
+.admin-delete-popup button:hover{
+    background-color: rgb(116, 150, 194);
+    cursor: pointer;
+}
+
+.admin-updated-wrapper{
+    width:80vw;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-left: 20vw;
+    z-index: 100;
+    
+}
+.admin-update-popup{
+    width:50%;
+    height:30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    z-index: 1000;
+    background-color: rgb(81, 109, 145);
+}
+.admin-update-popup button{
+    width:20%;
+    height:15%;
+    background-color: rgb(31, 105, 201);
+    border: none;
+    border-radius: 0.5rem;
+}
+.admin-update-popup button:hover{
+    background-color: rgb(116, 150, 194);
+    cursor: pointer;
+}

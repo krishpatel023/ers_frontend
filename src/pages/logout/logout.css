@@ -1,0 +1,33 @@
+.logout-wrapper{
+    width:100vw;
+    height:100vh;
+}
+.logout-header{
+    width:100%;
+    height:10vh;
+}
+.logout-popup-wrapper{
+    width:100vw;
+    height:90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logout-popup{
+    width:30%;
+    height:30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(142, 142, 142);
+gap:5%;
+}
+.logout-popup button{
+    width:20%;
+    height:15%;
+    background-color: rgb(50, 50, 255);
+}
+.logout-popup button:hover{
+    background-color: rgb(38, 114, 255);
+}

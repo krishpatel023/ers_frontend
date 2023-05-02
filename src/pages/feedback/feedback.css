@@ -1,0 +1,125 @@
+.feedback-wrapper{
+    width:100vw;
+    height:100vh;
+}
+.feedback-header{
+    width:100%;
+}
+.feedback-main{
+    width:100%;
+    height:90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.feedback-wrapper-box{
+    width:23rem;
+    height:70%;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+}
+.feedback-box-markings{
+    height:10%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.feedback-box-number{
+    width:16%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.feedback-box-slider{
+    width:85%;
+    height:5%;
+}
+.feedback-box-slider input{
+    width:100%;
+}
+.feedback-box-information{
+    width:85%;
+    height:2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.feedback-box-info-1{
+    width:100%;
+    text-align: left;
+}
+.feedback-box-info-2{
+    width:100%;
+    text-align: right;
+}
+.feedback-box-feedback{
+    height:50%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.feedback-box-feedback textarea{
+    width:90%;
+    height:80%;
+    resize: none;
+    padding: 5%;
+    border-radius: 1rem;
+}
+.feedback-box-submit{
+    width:100%;
+    height:10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.feedback-box-submit button{
+    width:90%;
+    height:90%;
+    background-color: black;
+    color: white;
+}
+.feedback-box-submit button:hover{
+    background-color: rgb(57, 57, 57);
+}
+
+/* AFTER SUBMISSION */
+
+.feedback-created-wrapper{
+    width:100%;
+    height:90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.feedback-created-box{
+    width:40%;
+    height:40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(99, 154, 99);
+    gap: 10%;
+}
+.feedback-created-box button{
+    width:30%;
+    height:15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+.feedback-created-box button:hover{
+
+    background-color: rgb(67, 67, 67);
+    color: white;
+}

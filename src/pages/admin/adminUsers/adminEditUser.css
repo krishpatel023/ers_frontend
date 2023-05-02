@@ -1,0 +1,170 @@
+.admin-edit-user-loading{
+    height:100vh;
+    width:80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.admin-edit-users-panel-wrapper{
+    width:100vw;
+    height:100vh;
+    overflow-y: hidden;
+    display: flex;
+}
+.admin-edit-users-panel-navbar{
+    width:20vw;
+    height:100%;
+    border:2px solid black;
+}
+.admin-edit-users-panel-detail{
+    width:80vw;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.admin-edit-users-panel-detail-wrapper{
+    width:35%;
+    height:80%;
+    /* border: 2px solid black; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid black ;
+}
+.edit-input-details-1,
+.edit-input-details-2,
+.edit-input-details-3{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.edit-input-details-1{
+    height:25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.edit-input-details-1 img{
+    max-height:90%;
+}
+.edit-input-details-2{
+    height:50%;
+    flex-direction: column;
+    gap: 5%;
+}
+.edit-input-details-2 input{
+    width:80%;
+    height:15%; 
+    padding: 5%;
+}
+.edit-input-details-2 button{
+    width:80%;
+    height:15%; 
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(21, 21, 245);
+    color: white;
+}
+.edit-input-details-2 button:hover{
+    background-color: rgb(42, 124, 248);
+}
+
+.edit-input-details-3{
+    height:10%;
+    gap: 10%;
+}
+.edit-input-details-3 button{
+    width: 30%;
+    height: 70%; 
+}
+.edit-input-edit-btn{
+    background-color: rgb(69, 97, 209);
+}
+.edit-input-edit-btn:hover{
+    background-color: rgb(142, 159, 208);
+}
+.edit-input-delete-btn{
+    background-color: rgb(237, 66, 66);
+}
+.edit-input-delete-btn:hover{
+    background-color: rgb(251, 124, 124);
+}
+/* .trial{
+    width:80vw;
+    height:100vh;
+    position:relative;
+} */
+/* REACT EDITS */
+.admin-deleted-wrapper{
+    width:80vw;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-left: 20vw;
+    z-index: 100;
+    
+}
+.admin-delete-popup{
+    width:50%;
+    height:30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    z-index: 1000;
+    background-color: rgb(254, 155, 155);
+}
+.admin-delete-popup button{
+    width:20%;
+    height:15%;
+    background-color: rgb(31, 105, 201);
+    border: none;
+    border-radius: 0.5rem;
+}
+.admin-delete-popup button:hover{
+    background-color: rgb(116, 150, 194);
+    cursor: pointer;
+}
+
+.admin-updated-wrapper{
+    width:80vw;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-left: 20vw;
+    z-index: 100;
+    
+}
+.admin-update-popup{
+    width:50%;
+    height:30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    z-index: 1000;
+    background-color: rgb(81, 109, 145);
+}
+.admin-update-popup button{
+    width:20%;
+    height:15%;
+    background-color: rgb(31, 105, 201);
+    border: none;
+    border-radius: 0.5rem;
+}
+.admin-update-popup button:hover{
+    background-color: rgb(116, 150, 194);
+    cursor: pointer;
+}

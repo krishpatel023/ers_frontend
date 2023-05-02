@@ -1,0 +1,104 @@
+.admin-create-hospitals-panel-wrapper{
+    width:100vw;
+    height:100vh;
+    overflow: hidden;
+    display: flex;
+}
+.admin-hospitals-panel-navbar{
+    width:20vw;
+    height:100vh;
+    border:2px solid black;
+}
+.admin-hospitals-panel-detail{
+    width:80vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.admin-hospitals-panel-detail-wrapper{
+    width:40%;
+    height:85%;
+    border: 2px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border-radius: 1rem; */
+}
+.create-hospital-input-details-1,
+.create-hospital-input-details-2,
+.create-hospital-input-details-3,
+.create-hospital-input-details-4{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.create-hospital-input-details-1{
+    max-height:65%;
+    flex-direction: column;
+}
+.create-hospital-input-details-1 input{
+    width:80%;
+    height:10%;
+    padding:5%;
+    margin-top: 4%;
+
+}
+.create-hospital-input-details-2{
+    height: 15%;
+    flex-direction: column;
+}
+.create-hospital-input-details-3{
+    height: 5%;
+}
+.create-hospital-input-details-4{
+    height: 15%;
+ }
+.create-hospital-input-details-4 button{
+    width: 80%;
+    height: 50%;
+    background-color: rgb(66, 159, 66);
+}
+.create-hospital-input-details-4 button:hover{
+    background-color: rgb(142, 208, 142);
+}
+
+.create-hospital-input-hospital-adjust{
+    margin-top: 10px;
+}
+.admin-created-wrapper{
+    width:80vw;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-left: 20vw;
+    z-index: 100;
+    
+}
+.admin-create-popup{
+    width:50%;
+    height:30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    z-index: 1000;
+    background-color: rgb(104, 174, 153);
+}
+.admin-create-popup button{
+    width:20%;
+    height:15%;
+    background-color: rgb(43, 98, 125);
+    border: none;
+    border-radius: 0.5rem;
+}
+.admin-create-popup button:hover{
+    background-color: rgb(82, 118, 136);
+    cursor: pointer;
+}

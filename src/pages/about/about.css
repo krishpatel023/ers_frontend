@@ -1,0 +1,17 @@
+.about-us-wrapper{
+    width:100vw;
+    height:100vh;
+    overflow-x: hidden;
+}
+.about-us-header{
+    width:100%;
+}
+.about-us-main{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-us-footer{
+    width:100%;
+}

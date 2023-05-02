@@ -1,0 +1,82 @@
+.home-main {
+  width: 100vw;
+}
+.top-headlines-home {
+  padding-top: 5rem;
+}
+.top-headlines-home h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+.top-heaglines-card-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: rgb(240, 240, 240);
+}
+.developer-quote-home {
+  padding-top: 5rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.developer-quote-home-wrapper{
+  width:70%;
+}
+.reviews-display-home {
+  margin-top: 5rem;
+
+  background-color: rgba(230, 230, 230, 0.36);
+  color: white;
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.rate-us-home {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.rate-us-home h1 {
+  text-align: center;
+}
+.rate-us-button-home-link{
+  width:100%;
+  height:100%;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rate-us-button-home {
+  background-color: rgb(82, 82, 82);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width:30%;
+  height:20%;
+  font-size: 1.6rem;
+  border: 1px solid rgb(82, 82, 82);
+  border-radius: 5px;
+
+}
+.rate-us-button-home:hover {
+  cursor: pointer;
+  background-color: white;
+  color: rgb(82, 82, 82);
+}
+@media only screen and (max-width: 900px) {
+  .reviews-display-home {
+    flex-direction: column;
+  }
+}

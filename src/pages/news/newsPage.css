@@ -1,0 +1,26 @@
+.news-wrapper{
+    width:100vw;
+    height:100vh;
+    overflow-x: hidden;
+}
+.news-details{
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.my-published-section{
+    width:70vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.news-item{
+    width:70%;
+    min-height: 30vh;
+    border: 2px solid black;
+    margin-top: 3rem;
+    padding:1.5rem;
+}

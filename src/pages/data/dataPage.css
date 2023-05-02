@@ -1,0 +1,198 @@
+.data-page-wrapper{
+    width:100vw;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+.country{
+    font-family: sans-serif;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.country .countryflex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width:80%;
+    
+}
+.country .conf{
+    border: 2px solid rgba(255, 186, 186, 0.48);
+    height: 150px;
+    width: 25%;
+    padding: 10px;
+    background: rgba(255, 186, 186, 0.293);
+    border-radius: 5px;  
+}
+.country .conf:hover{
+    background-color: rgb(255, 255, 255);
+}
+.country .conf .confdata{
+    color: rgb(135, 50, 50);
+    font-size: 40px;
+    text-align: center;
+    margin-top: 15px;
+}
+.country .recovered{
+    border: 2px solid rgba(100, 203, 100, 0.584);
+    height: 150px;
+    width: 25%;
+    padding: 10px;
+    background: rgba(100, 203, 100, 0.277);
+    border-radius: 5px;
+}
+.country .recovered:hover{
+    background-color: rgb(255, 255, 255);
+}
+.country .recovered .recoverdata{
+    color: rgb(0, 72, 0);
+    font-size: 40px;
+    text-align: center;
+    margin-top: 15px;
+}
+.country .active{
+    border: 2px solid rgba(47, 47, 251, 0.266);
+    height: 150px;
+    width: 25%;
+    padding: 10px;
+    background: rgba(47, 47, 251, 0.266);
+    border-radius: 5px;
+}
+.country .active:hover{
+    background-color: rgb(255, 255, 255);
+}
+.country .active .activedata{
+    color: rgb(0, 0, 100);
+    font-size: 40px;
+    text-align: center;
+    margin-top: 15px;
+}
+.country .death{
+    border: 2px solid rgba(0, 0, 0, 0.296);
+    height: 150px;
+    width: 25%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.296);
+    border-radius: 5px;
+}
+.country .death:hover{
+    background-color: rgb(255, 255, 255);
+}
+.country .death .deathdata{
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.state{
+    width:100%;
+    height:5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.state-data-font{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.state .stateflex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width:80%;
+    height:100%;
+}
+.state .statename{
+    color:rgb(217, 217, 217);
+    border:1px solid white;
+    height: 100%;
+    width: 20%;
+    text-align: center;
+    /* padding-top: 19px; */
+    background-color: rgb(11,12,41);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.state .statedata{
+    color: rgb(217, 217, 217);
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height:100%;
+}
+.state .statedata .statedatacss{
+    border: 1px solid white;
+    height: 100%;
+    width: 25%;
+    text-align: center;
+    background-color: rgb(11,12,41);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.state .statedata .stateconf{
+    color: red;
+}
+.state .statedata .staterecover{
+    color: green;
+}
+.state .statedata .stateactive{
+    color: blue;
+}
+.state .statedata .statedeath{
+    color: grey;
+}
+
+
+/* SEARCH */
+.search{
+    padding-top: 1rem;
+    text-align: center;
+    padding-bottom: 4rem;
+    width:100%;
+   
+}
+.search .abovesearch{
+    font-size: 20px;
+    padding-bottom: 30px;
+    animation: change 3s infinite;
+    position: relative;
+}
+@keyframes change {
+    0%{top:0px;}
+    50%{top:12px;}
+    100%{top:0px;}
+  }
+.search-form input{
+   width: 500px;
+   height: 40px;
+   border: 1px solid gray;
+   border-radius: 5px;
+   font-size: 20px;
+   box-shadow: 2px 2px gray;
+   
+}
+.search-form button{
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 2px 2px gray;
+}
+.search-form button:hover{
+    cursor: pointer;
+}

@@ -1,0 +1,144 @@
+/* Dashboard*/
+
+.dashboard-main {
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  border: 3px solid black;
+  width: 700px;
+  padding-bottom: 40px;
+}
+
+.user-profile-pic {
+  width: 120px;
+  height: 120px;
+  border: 1px solid white;
+  border-radius: 100px;
+}
+.user-profile-form {
+  padding-top: 40px;
+}
+.user-profile-form-input {
+  margin-top: 10px;
+  height: 30px;
+  width: 120px;
+  font-size: 20px;
+  background-color: white;
+  color: black;
+  border: 1px solid white;
+}
+.user-dash-email {
+  margin-top: 10px;
+  height: 30px;
+  width: 320px;
+  font-size: 20px;
+  background-color: white;
+  color: black;
+  border: 1px solid white;
+}
+.edit-dash-button {
+  
+  width: 90px;
+  height: 40px;
+  
+  margin-top: 50px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.edit-dash-button button{
+  width:100%;
+  height:100%;
+  border: 1px solid var(--color2);
+  background: var(--color2);
+  color: white;
+  font-size: 20px;
+}
+.edit-dash-button button:hover {
+  background-color: white;
+  color: var(--color2);
+  font-size: 20px;
+}
+.delete-dash-button{
+
+  width: 90px;
+  height: 40px;
+  
+  margin-top: 50px;
+  border-radius: 3px;
+  
+  
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.delete-dash-button button{
+  height:100%;
+  width:100%;
+  border: 1px solid rgb(66, 0, 0);
+  background-color: rgb(134, 0, 0);
+  color: white;
+  font-size: 20px;
+}
+.delete-dash-button button:hover {
+  background-color: white;
+  color: rgb(134, 0, 0);
+  font-size: 20px;
+}
+
+.changepass-dash-button {
+  border: 1px solid rgb(0, 98, 26);
+  width: 200px;
+  height: 40px;
+  background: rgb(0, 98, 26);
+  margin-top: 50px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+}
+.changepass-dash-button:hover {
+  background-color: white;
+  color: rgb(0, 98, 26);
+  font-size: 20px;
+}
+
+/* Usereeviews.js */
+
+.user-dash-feedback {
+  border: 1px solid black;
+  width: 400px;
+}
+
+
+
+.user-dashboard-img-edit{
+  height:10%;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.user-dashboard-img-edit input{
+  display: none;
+}
+.user-dashboard-img-edit button{
+  width:80%;
+  padding: 5%;
+  height:70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:10%;
+  font-size: 1.2rem;
+  background-color: rgb(73, 77, 86);
+  color: white;
+}
+.user-dashboard-img-edit button:hover{
+  background-color: rgb(138, 138, 138);
+}

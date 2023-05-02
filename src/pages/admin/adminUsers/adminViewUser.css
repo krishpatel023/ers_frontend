@@ -1,0 +1,108 @@
+.admin-view-users-panel-wrapper{
+    width:100vw;
+    height:100vh;
+    display: flex;
+}
+.admin-view-users-panel-navbar{
+    width:20%;
+    height:100%;
+}
+.admin-view-user-wrapper{
+    width:80%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.view-user-box{
+    width:30vw;
+    height:80%;
+    border: 2px solid rgb(0, 0, 0);
+}
+.view-detail-img{
+    width:100%;
+    height:20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.view-detail-img img{
+    height:100%;
+    /* border-radius: 25%; */
+}
+.admin-view-detail-section-wrapper{
+    width:100%;
+    height:35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.admin-view-detail-section-wrapper span{
+    font-size: 20px;
+}
+.admin-view-user-detail-section-1{
+    width:40%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    flex-direction: column;
+}
+.admin-view-user-detail-section-2{
+    width:60%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.admin-view-user-feedbacks{
+    height:35%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.admin-view-user-feedbacks-wrapper{
+    height:90%;
+    width:90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: scroll;
+    gap:3%;
+}
+.feedback-box{
+    width:80%;
+    height:80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid black;
+}
+.admin-view-user-btn{
+    width:100%;
+    height:10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.admin-view-btn{
+    width:20%;
+    height:70%;
+    background-color: rgb(39, 39, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.admin-view-user-link{
+    color:white;
+
+}
+.admin-view-btn:hover{
+    background-color: rgb(68, 74, 174);
+}
