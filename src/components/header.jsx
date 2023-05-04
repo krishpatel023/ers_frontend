@@ -59,7 +59,7 @@ function Header() {
       <div className="detail-section">
         <nav ref={navRef}>
           
-          
+          <NavLink to='/'>Home</NavLink>
           <NavLink to='/dataPage'>Data</NavLink>
           <NavLink to='/newsPage'>News</NavLink>
           <NavLink to='/listHospital'>Hospitals</NavLink>

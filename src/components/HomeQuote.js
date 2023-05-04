@@ -17,7 +17,7 @@ export default function HomeQuote() {
             </h1>
           </div>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <Link to="/listHospital">
+            <Link to="/listHospital" className='Link-Universal'>
             <div className="emergency-button-ani-home">
               <b style={{ textAlign: "center", lineHeight: "2.8rem" }}>
                 Emergency
@@ -42,7 +42,7 @@ export default function HomeQuote() {
             </h1>
           </div>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <Link to="/resources">
+            <Link to="/resources" className='Link-Universal'>
             <div className="resources-button-ani-home">
               <b style={{ textAlign: "center", lineHeight: "2.8rem" }}>
                 Resources

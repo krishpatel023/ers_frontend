@@ -84,7 +84,7 @@ function ChangeUserPassword(){
                 <input type="password" placeholder="Re-Enter New Password"onChange={(e)=>{setPassword2(e.target.value)}}/>
                 <button onClick={()=>{handleSubmit()}}>CHANGE PASSWORD</button>
                 <span>{Message?Message:null}</span>
-                <span>Don't want to? <Link to="/">Go Back</Link></span>
+                <span>Don't want to? <Link to="/" className='Link-Universal'>Go Back</Link></span>
             </div>
         </div>
     )

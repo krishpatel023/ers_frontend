@@ -50,7 +50,7 @@ function AdminHospitals() {
             </div>
             <div className="admin-upper-3">
                 <div className="admin-upper-3-btn">
-                  <Link className="link" to="/admin/Hospital/createHospital">Add Hospital</Link>
+                  <Link className="link Link-Universal" to="/admin/Hospital/createHospital">Add Hospital</Link>
                 </div>              
             </div>
             <div className="admin-upper-4">
@@ -83,10 +83,10 @@ function AdminHospitals() {
                 <td className="text-hospital-center">{data.ratings}</td>
                 <td className="text-hospital-center-special">
                   <div className="text-hospital-center-special-btn">
-                    <Link className="link" to={`/admin/Hospital/editHospital/${data._id}`}>EDIT</Link>
+                    <Link className="link Link-Universal" to={`/admin/Hospital/editHospital/${data._id}`}>EDIT</Link>
                   </div>
                   <div className="text-hospital-center-special-btn">
-                    <Link className="link" to={`/admin/Hospital/viewHospital/${data._id}`}>VIEW</Link>
+                    <Link className="link Link-Universal" to={`/admin/Hospital/viewHospital/${data._id}`}>VIEW</Link>
                   </div>
                 </td>
               </tr>

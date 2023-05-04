@@ -14,6 +14,7 @@ function Footer(){
             </div>
             <div className="footer-section-2">
                  <h2>Important Links</h2>
+                 <Link to='/' className='footer-section-2-links Link-Universal'>Home</Link>
                  <Link to='/dataPage' className='footer-section-2-links Link-Universal'>Data</Link>
                  <Link to='/newspage' className='footer-section-2-links Link-Universal'>News</Link>
                  <Link to='/listHospital' className='footer-section-2-links Link-Universal'>Hospitals</Link>

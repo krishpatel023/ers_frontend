@@ -168,7 +168,7 @@ export default function HospitalCard() {
                     </div>
                     <div style={{ textAlign: "center", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
                         <div className="adjustment-btn rate-us-card1">
-                            <Link to={`/feedback/${id}`} style={{color:"white "}}>Rate Us Now!!</Link>
+                            <Link to={`/feedback/${id}`} style={{color:"white "}} className='Link-Universal'>Rate Us Now!!</Link>
                         </div>
                     </div>
                 </div>

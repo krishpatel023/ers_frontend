@@ -64,7 +64,7 @@ export default function Profile() {
                         <div><i class="fi fi-sr-phone-call"></i> Contact : </div>
                         <div className="contact">{data.phone}</div>
                     </div>
-                    <Link to={`/viewHospital/${data._id}`}>
+                    <Link to={`/viewHospital/${data._id}`} className='Link-Universal' >
                     <div className="contactbut1">
                         <a href="tel:987654321">View Details</a>
                     </div>

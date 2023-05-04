@@ -84,7 +84,7 @@ function AdminViewUser(){
                                         <div className="feedback-box" key={i}>
                                             <span>{data.feedback}</span>
                                             <span>FOR : 
-                                                <Link to="#">{data.feedbackOf}</Link>
+                                                <Link className='Link-Universal' to="#">{data.feedbackOf}</Link>
                                             </span>
                                         </div>
                                     )
@@ -94,7 +94,7 @@ function AdminViewUser(){
                         </div>
                         <div className="admin-view-user-btn">
                             <div className='admin-view-btn'>
-                                <Link className='admin-view-user-link' to={`/admin/User/editUser/${id}`}>EDIT</Link>
+                                <Link className='admin-view-user-link Link-Universal' to={`/admin/User/editUser/${id}`}>EDIT</Link>
                             </div>
                         </div>
                     </div>

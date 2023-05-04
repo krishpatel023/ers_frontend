@@ -1,5 +1,6 @@
 import './newsPage.css'
 import Header from '../../components/header'
+import Footer from '../../components/footer'
 import { useState , useEffect} from 'react'
 import axios from 'axios'
 function NewsPage(){
@@ -36,6 +37,7 @@ function NewsPage(){
                 </div>
                 : "LOADING"
             }
+            <Footer/>
 
         </div>
     )

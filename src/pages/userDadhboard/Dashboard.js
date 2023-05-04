@@ -207,7 +207,7 @@ export default function Dashboard() {
               <div className="edit-dash-button">
                 <button onClick={()=>{handleEdit()}}><b>Edit</b></button>
               </div>
-              <Link to='/changeUserPassword'>
+              <Link to='/changeUserPassword' className='Link-Universal'>
               <div className="changepass-dash-button">
                 <b>Change Password</b>
               </div>

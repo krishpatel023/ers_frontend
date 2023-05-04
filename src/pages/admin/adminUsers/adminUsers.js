@@ -48,7 +48,7 @@ function AdminUsers() {
             </div>
             <div className="admin-upper-3">
                 <div className="admin-upper-3-btn">
-                  <Link className="link" to="/admin/User/createUser">Add User</Link>
+                  <Link className="link Link-Universal" to="/admin/User/createUser">Add User</Link>
                 </div>              
             </div>
             <div className="admin-upper-4">
@@ -77,10 +77,10 @@ function AdminUsers() {
                 <td className="text-center">{data.isAdmin ? "ADMIN" : "USER"}</td>
                 <td className="text-center-special">
                   <div className="text-center-special-btn">
-                    <Link className="link" to={`/admin/User/editUser/${data._id}`}>EDIT</Link>
+                    <Link className="link Link-Universal" to={`/admin/User/editUser/${data._id}`}>EDIT</Link>
                   </div>
                   <div className="text-center-special-btn">
-                    <Link className="link" to={`/admin/User/viewUser/${data._id}`}>VIEW</Link>
+                    <Link className="link Link-Universal" to={`/admin/User/viewUser/${data._id}`}>VIEW</Link>
                   </div>
                 </td>
               </tr>

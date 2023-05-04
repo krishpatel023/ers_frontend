@@ -91,7 +91,7 @@ function Register(){
                     </div>
                     <div className="register-input-details-5">
                         <button onClick={()=>{handleCreate()}}>REGISTER</button>
-                        <span>Have an account? <Link to="/login">Login</Link></span>
+                        <span>Have an account? <Link to="/login" className='Link-Universal'>Login</Link></span>
                     </div>
                 </div>
             </div>

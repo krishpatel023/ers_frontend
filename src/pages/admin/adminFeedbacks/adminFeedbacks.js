@@ -70,7 +70,7 @@ function AdminFeedbacks(){
                         publishedDB.map((data,i)=>
                             <div className="feedback-item" key={i}>
                                 <p>{data.feedback}</p>
-                                <Link to={`/admin/User/editUser/${data.feedbackBy}`}>{data.feedbackBy}</Link>
+                                <Link className='Link-Universal' to={`/admin/User/editUser/${data.feedbackBy}`}>{data.feedbackBy}</Link>
                                 <button onClick={()=>{handleChange(data._id,data.isPublished)}}>UnPublish</button> 
                             </div>
                         )
@@ -84,7 +84,7 @@ function AdminFeedbacks(){
                         notPublishedDB.map((data,i)=>
                             <div className="feedback-item" key={i}>
                                 <p>{data.feedback}</p>
-                                <Link to={`/admin/User/editUser/${data.feedbackBy}`}>{data.feedbackBy}</Link>
+                                <Link className='Link-Universal' to={`/admin/User/editUser/${data.feedbackBy}`}>{data.feedbackBy}</Link>
                                 <button onClick={()=>{handleChange(data._id,data.isPublished)}}>Publish</button> 
                             </div>
                         )

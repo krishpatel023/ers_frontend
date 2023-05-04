@@ -34,7 +34,7 @@ function Login(){
                 <input type="password" placeholder='Password' onChange={(e)=>{setPassword(e.target.value)}}/>
                 <button onClick={()=>{handleSubmit()}}>LOGIN</button>
                 <span>{Message?Message:null}</span>
-                <span>Don't have an account? <Link to="/register">Register</Link></span>
+                <span>Don't have an account? <Link to="/register" className='Link-Universal'>Register</Link></span>
             </div>
         </div>
     )
