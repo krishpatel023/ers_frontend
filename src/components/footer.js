@@ -14,16 +14,16 @@ function Footer(){
             </div>
             <div className="footer-section-2">
                  <h2>Important Links</h2>
-                 <Link to='/dataPage' className='footer-section-2-links'>Data</Link>
-                 <Link to='/newspage' className='footer-section-2-links'>News</Link>
-                 <Link to='/listHospital' className='footer-section-2-links'>Hospitals</Link>
-                 <Link to='/resources' className='footer-section-2-links'>Resources</Link>
-                 <Link to='/about' className='footer-section-2-links'>About</Link>
+                 <Link to='/dataPage' className='footer-section-2-links Link-Universal'>Data</Link>
+                 <Link to='/newspage' className='footer-section-2-links Link-Universal'>News</Link>
+                 <Link to='/listHospital' className='footer-section-2-links Link-Universal'>Hospitals</Link>
+                 <Link to='/resources' className='footer-section-2-links Link-Universal'>Resources</Link>
+                 <Link to='/about' className='footer-section-2-links Link-Universal'>About</Link>
             </div>
             <div className="footer-section-3">
                 <div className="footer-section-3-feedback">
                     <h3>Please Leave your Feedbacks</h3>
-                    <Link to='/feedback/ers' className='footer-section-3-Link'>
+                    <Link to='/feedback/ers' className='footer-section-3-Link Link-Universal'>
                     <div className="footer-section-3-feedback-btn">
                         <h3>FEEDBACK</h3>
                     </div>

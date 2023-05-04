@@ -33,7 +33,7 @@ export default function homeComponent() {
         <h1>
           As developers, we must constantly review and refine our work to ensure that it stays relevant and useful to those who rely on it.
         </h1>
-        <Link to='/feedback/ers' className="rate-us-button-home-link">
+        <Link to='/feedback/ers' className="rate-us-button-home-link Link-Universal">
           <div className="rate-us-button-home">
             <b>Rate Us</b>
           </div>

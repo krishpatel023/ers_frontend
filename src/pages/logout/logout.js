@@ -14,6 +14,7 @@ function Logout(){
     //==========================================================
     useEffect(()=>{
         try{
+            axios.get(`${backendURL}/api/auth/logout`,config)
             setLogout(true)
             removeCookie("access_token")
         }
