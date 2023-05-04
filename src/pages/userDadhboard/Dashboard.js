@@ -6,6 +6,7 @@ import { useNavigate,Link, useParams} from "react-router-dom"
 import axios from 'axios'
 import Header from "../../components/header";
 import { config, backendURL } from "../../utils";
+import { useCookies } from'react-cookie';
 export default function Dashboard() {
 
   const [id,setId]=useState()
@@ -18,6 +19,7 @@ export default function Dashboard() {
   const [blocker, setBlocker]=useState(false)
   const [isEdited, setIsEdited] =useState(false)
   const navigate = useNavigate()
+  const [cookies, setCookie, removeCookie] = useCookies(['user']);
   function redirectLogin(req,res,next){
       try{
         if(req.error){
@@ -41,19 +43,32 @@ export default function Dashboard() {
       }
   }
   useEffect(()=>{
-  axios.get(`${backendURL}/api/auth/validate`,config)
-      .then( function(response){
-          if(response.data.access_token){
-              setToken(response.data.access_token)
-          }
-          else{
-              redirectLogin({error:true})
-          }
-      })
-      .catch(function(error){
-          console.log(error)
-          redirectLogin(error.response.data)
-      })
+    try{
+      const ca = cookies.access_token;
+      if(ca){
+        setToken(ca)
+      }
+      else{
+        redirectLogin({error:true})
+      }
+    }
+    catch(error){
+      console.log(error)
+      redirectLogin(error.response.data)
+    }
+  // axios.get(`${backendURL}/api/auth/validate`,config)
+  //     .then( function(response){
+  //         if(response.data.access_token){
+  //             setToken(response.data.access_token)
+  //         }
+  //         else{
+  //             redirectLogin({error:true})
+  //         }
+  //     })
+  //     .catch(function(error){
+  //         console.log(error)
+  //         redirectLogin(error.response.data)
+  //     })
   },[blocker])
   const handleConversion2 = async ()=>{
     const ca = Token;

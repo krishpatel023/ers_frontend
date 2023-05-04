@@ -3,6 +3,7 @@ import { useNavigate,Link} from "react-router-dom"
 import axios from 'axios'
 import './changeUserPassword.css'
 import { config, backendURL } from "../../utils"
+import { useCookies } from "react-cookie"
 function ChangeUserPassword(){
     const [id, setId]=useState()
     // const [OldPassword, setOldPassword]=useState()
@@ -20,20 +21,36 @@ function ChangeUserPassword(){
           console.log(error)
         }
     }
+    const [cookies, setCookie, removeCookie] = useCookies(['user']);
+
     useEffect(()=>{
-    axios.get(`${backendURL}/api/auth/validate`,config)
-        .then( function(response){
-            if(response.data.access_token){
-                setToken(response.data.access_token)
+
+        try{
+            const ca = cookies.access_token;
+            if(ca){
+              setToken(ca)
             }
             else{
-                redirectLogin({error:true})
+              redirectLogin({error:true})
             }
-        })
-        .catch(function(error){
+          }
+          catch(error){
             console.log(error)
-            // redirectLogin(error.response.data)
-        })
+            redirectLogin(error.response.data)
+          }
+    // axios.get(`${backendURL}/api/auth/validate`,config)
+    //     .then( function(response){
+    //         if(response.data.access_token){
+    //             setToken(response.data.access_token)
+    //         }
+    //         else{
+    //             redirectLogin({error:true})
+    //         }
+    //     })
+    //     .catch(function(error){
+    //         console.log(error)
+    //         // redirectLogin(error.response.data)
+    //     })
     },[])
     const handleConversion = ()=>{
         const ca = Token;

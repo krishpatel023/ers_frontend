@@ -1,5 +1,6 @@
 import "./dataPage.css";
 import Header from "../../components/header";
+import Footer from "../../components/footer";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { backendURL, config } from "../../utils";
@@ -49,7 +50,7 @@ function DataPage() {
                 </div>
                 <div className="recoverdata">{dataBase[0].recovered}</div>
               </div>
-              <div className="active">
+              <div className="active1">
                 <div
                   style={{
                     textAlign: "center",
@@ -111,6 +112,7 @@ function DataPage() {
               </div>
             </div>
           ))}
+          <Footer/>
         </div>
       ) : (
         "LOADING"

@@ -23,9 +23,11 @@ import Feedback from './pages/feedback/feedback'
 import UserDashboard from './pages/userDadhboard/Dashboard'
 import Resources from './pages/resources/Resources'
 import About from './pages/about/about';
+// import { CookiesProvider } from 'react-cookie';
 function App() {
   return (
     <div className="App">
+
       <BrowserRouter>
       <Routes>
         <Route path='/' element={<HomePage/>}/>

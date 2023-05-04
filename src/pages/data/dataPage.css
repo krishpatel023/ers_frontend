@@ -16,12 +16,11 @@
 }
 .country .countryflex{
     display: flex;
-    flex-direction: row;
     justify-content: center;
     width:80%;
     
 }
-.country .conf{
+.conf{
     border: 2px solid rgba(255, 186, 186, 0.48);
     height: 150px;
     width: 25%;
@@ -29,16 +28,16 @@
     background: rgba(255, 186, 186, 0.293);
     border-radius: 5px;  
 }
-.country .conf:hover{
+.conf:hover{
     background-color: rgb(255, 255, 255);
 }
-.country .conf .confdata{
+.conf .confdata{
     color: rgb(135, 50, 50);
     font-size: 40px;
     text-align: center;
     margin-top: 15px;
 }
-.country .recovered{
+.recovered{
     border: 2px solid rgba(100, 203, 100, 0.584);
     height: 150px;
     width: 25%;
@@ -46,16 +45,16 @@
     background: rgba(100, 203, 100, 0.277);
     border-radius: 5px;
 }
-.country .recovered:hover{
+.recovered:hover{
     background-color: rgb(255, 255, 255);
 }
-.country .recovered .recoverdata{
+.recovered .recoverdata{
     color: rgb(0, 72, 0);
     font-size: 40px;
     text-align: center;
     margin-top: 15px;
 }
-.country .active{
+.active1{
     border: 2px solid rgba(47, 47, 251, 0.266);
     height: 150px;
     width: 25%;
@@ -63,16 +62,16 @@
     background: rgba(47, 47, 251, 0.266);
     border-radius: 5px;
 }
-.country .active:hover{
+.active1:hover{
     background-color: rgb(255, 255, 255);
 }
-.country .active .activedata{
+.active1 .activedata{
     color: rgb(0, 0, 100);
     font-size: 40px;
     text-align: center;
     margin-top: 15px;
 }
-.country .death{
+.death{
     border: 2px solid rgba(0, 0, 0, 0.296);
     height: 150px;
     width: 25%;
@@ -80,10 +79,10 @@
     background: rgba(0, 0, 0, 0.296);
     border-radius: 5px;
 }
-.country .death:hover{
+.death:hover{
     background-color: rgb(255, 255, 255);
 }
-.country .death .deathdata{
+.death .deathdata{
     color: rgb(0, 0, 0);
     font-size: 40px;
     text-align: center;
@@ -195,4 +194,33 @@
 }
 .search-form button:hover{
     cursor: pointer;
+}
+
+
+@media (max-width: 800px) {
+    .countryflex{
+        flex-direction: column;
+    }
+    .conf,
+    .recovered,
+    .active1,
+    .death{
+        width:100%;
+    }
+    .state{
+        height: 6rem;
+    }
+    .state .stateflex{
+        flex-direction: column;
+    }
+    .state .statename{
+        width: 100%;
+    }
+    .state .statedata{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .state .statedata .statedatacss{
+        font-size: 0.8rem;
+    }
 }

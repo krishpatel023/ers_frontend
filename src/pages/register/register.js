@@ -83,7 +83,7 @@ function Register(){
                         <input type="password" name="password" placeholder="Password"  onChange={(e)=>{setPassword(e.target.value)}}/>
                     </div>
                     <div className="register-input-details-4">
-                        <button onClick={()=>{handleInputClick()}}><i class="fi fi-sr-cloud-upload-alt"></i> Upload Profile Picture</button>
+                        <button onClick={()=>{handleInputClick()}}><i className="fi fi-sr-cloud-upload-alt"></i> Upload Profile Picture</button>
                         <input type="file" accept="image/*" id="getFile" onChange={(e)=>{convertImage(e.target.files[0])}}/> 
                     </div>
                     <div className="register--user-message-display">

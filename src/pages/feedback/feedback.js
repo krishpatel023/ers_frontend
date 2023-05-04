@@ -4,6 +4,7 @@ import { useState,useEffect } from "react"
 import { useNavigate,Link, useParams} from "react-router-dom"
 import axios from 'axios'
 import { config, backendURL } from '../../utils'
+import { useCookies } from 'react-cookie'
 function Feedback(){
     const { id } = useParams();
     const [Feedback,setFeedback]=useState()
@@ -20,20 +21,35 @@ function Feedback(){
           console.log(error)
         }
     }
+    const [cookies, setCookie, removeCookie] = useCookies(['user']);
+
     useEffect(()=>{
-    axios.get(`${backendURL}/api/auth/validate`,config)
-        .then( function(response){
-            if(response.data.access_token){
-                setToken(response.data.access_token)
+        try{
+            const ca = cookies.access_token;
+            if(ca){
+              setToken(ca)
             }
             else{
-                redirectLogin({error:true})
+              redirectLogin({error:true})
             }
-        })
-        .catch(function(error){
+          }
+          catch(error){
             console.log(error)
             redirectLogin(error.response.data)
-        })
+          }
+    // axios.get(`${backendURL}/api/auth/validate`,config)
+    //     .then( function(response){
+    //         if(response.data.access_token){
+    //             setToken(response.data.access_token)
+    //         }
+    //         else{
+    //             redirectLogin({error:true})
+    //         }
+    //     })
+    //     .catch(function(error){
+    //         console.log(error)
+    //         redirectLogin(error.response.data)
+    //     })
     },[])
     const handleConversion1 = async ()=>{
         const ca = Token;

@@ -7,6 +7,7 @@ import Logo from '../assets/logo.png'
 import {useState,useEffect} from "react"
 import axios from 'axios'
 import { backendURL , config} from '../utils';
+import {useCookies} from 'react-cookie'
 function Header() {
 	const navRef = useRef(null);
 
@@ -17,21 +18,38 @@ function Header() {
 	};
 
   const [dataBase,setData]=useState(false)
+  const [cookies, setCookie, removeCookie] = useCookies(['user']);
+
   useEffect(()=>{
-    axios.get(`${backendURL}/api/auth/validate`,config)
-      .then( function(response){
-          if(response.data.access_token){
-            console.log(response.data.access_token)
+    try{
+      const ca = cookies.access_token;
+      if(ca){
+            console.log(ca)
             setData(true)
-          }
-          else{
-            setData(false)
-          }
-      })
-      .catch(function(error){
-          console.log(error)
+      }
+      else{
+        setData(false)
+      }
+    }
+    catch(err){
+          console.log(err)
           setData(false)
-      })
+    }
+
+    // axios.get(`${backendURL}/api/auth/validate`,config)
+    //   .then( function(response){
+    //       if(response.data.access_token){
+    //         console.log(response.data.access_token)
+    //         setData(true)
+    //       }
+    //       else{
+    //         setData(false)
+    //       }
+    //   })
+    //   .catch(function(error){
+    //       console.log(error)
+    //       setData(false)
+    //   })
   },[])
 	return (
     <header>
