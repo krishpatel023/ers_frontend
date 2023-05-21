@@ -4,10 +4,11 @@ import axios from 'axios'
 import {useNavigate, Link} from 'react-router-dom'
 import Header from "../../../components/header";
 import { config , backendURL } from "../../../utils";
-
+import { useCookies } from 'react-cookie'
+import Footer from "../../../components/footer"
 export default function Profile() {
 
-
+    const [cookies, setCookie, removeCookie] = useCookies(['user']);
     const [dataBase,setDatabase] = useState()
 
     //===============REDIRECTION==============================
@@ -25,6 +26,9 @@ export default function Profile() {
     useEffect(()=>{
         axios.get(`${backendURL}/api/hospitals/`,config)
             .then(function(response){
+                if(!cookies.access_token){
+                    navigate('/login')
+                }
                 setDatabase(response.data)
             })
             .catch(function(error){
@@ -77,7 +81,9 @@ export default function Profile() {
 
             : "LOADING"
         }
-    
+        <br />
+        <br />
+        <Footer/>
     </div>
   );
 }

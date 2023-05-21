@@ -1,76 +1,150 @@
-import {useEffect, useState} from "react"
-import axios from 'axios'
-import {useNavigate,useParams} from 'react-router-dom'
 import "./styles/review.css";
-import img4 from "../assets/favorite.png";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { useNavigate, useParams } from "react-router-dom";
 import { backendURL, config } from "../utils";
-export default function Review(props) {
-  const [dataBase,setDatabase] = useState()
-  const [blocker, setBlocker] = useState()
-  //===============REDIRECTION==============================
-  const navigate = useNavigate()
-  function redirectLogin(req,res,next){
-      try{
-          if(req.error){
-          navigate('/login')
-          }
-      }catch(error){
-          console.log(error)
+
+import star from "../assets/favorite.png";
+
+function Review(props) {
+  const [showInput, setShowInput] = useState(false);
+
+  const [dataBase, setDatabase] = useState();
+  const [blocker, setBlocker] = useState();
+  const [feedbackRes, setFeedbackRes] = useState();
+  const [Feedback, setFeedback] = useState();
+  const [created, setCreated] = useState(false);
+
+  const navigate = useNavigate();
+  function redirectLogin(req, res, next) {
+    try {
+      if (req.error) {
+        navigate("/login");
       }
-  }
-  useEffect(()=>{
-    if(props.userId){
-      axios.get(`${backendURL}/api/users/${props.userId}`,config)
-        .then(function(response){
-            setDatabase(response.data)
-            setBlocker(true)
-        })
-        .catch(function(error){
-            redirectLogin(error.response.data)
-            console.log(error)
-        })
+    } catch (error) {
+      console.log(error);
     }
-  },[blocker])
-  
+  }
+  useEffect(() => {
+    if (props.userId) {
+      axios
+        .get(`${backendURL}/api/users/${props.userId}`, config)
+        .then(function (response) {
+          setDatabase(response.data);
+          setBlocker(true);
+        })
+        .catch(function (error) {
+          redirectLogin(error.response.data);
+          console.log(error);
+        });
+    }
+
+    axios
+      .get(
+        `${backendURL}/api/feedbacks/feedbackReply/${props.feedbackId}`,
+        config
+      )
+      .then(function (response) {
+        setFeedbackRes(response.data);
+      })
+      .catch(function (error) {
+        redirectLogin(error.response.data);
+        console.log(error);
+      });
+  }, [blocker]);
+
+  const replySubmit = () => {
+    try {
+      axios
+        .post(
+          `${backendURL}/api/feedbacks/feedbackReply`,
+          {
+            feedback: Feedback,
+            feedbackBy: props.userId,
+            isPublished: false,
+            replyOf: props.feedbackId,
+          },
+          config
+        )
+        .then(function () {
+          setCreated(true);
+          // navigate(`/viewHospital/${props.hospId}`);
+        })
+        .catch(function (error) {
+          redirectLogin(error.response.data);
+          console.log(error);
+        });
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
-    <div className="review-display-card">
-      {
-        dataBase?
-        <div>
-        <div className="user-style-card">
-          <div style={{ display: "flex", flexDirection: "row" }}>
-            <div>
-              <img
-                src={dataBase.img}
-                style={{ height: "40px", width: "40px" }}
-                alt="#"
-              />
+    <div className="review-wrapper">
+      {dataBase ? (
+        <div className="review-box">
+          <div className="review-section-1">
+            <div className="review-img-section">
+              <img src={dataBase.img} alt="" />
             </div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                paddingLeft: "9px",
-              }}
-            >
-              <b>{dataBase.firstname} {dataBase.lastname}</b>
-              <div style={{ paddingTop: "3px" }}>
-                <b style={{ marginTop: "-5px" }} className="review-number">
-                  {props.rating}
-                </b>
-                <img src={img4} style={{ height: "15px", width: "15px" }} alt=""/>
-              </div>
+            <div className="review-name-section">
+              <h3>
+                {dataBase.firstname} {dataBase.lastname}
+              </h3>
+              {props.rating ? (
+                <span>
+                  4 <img src={star} alt="" style={{ width: "15px" }} />
+                </span>
+              ) : null}
             </div>
           </div>
-          <div>
-            <p>{props.feedbackMessage}
-            </p>
+          <div className="review-section-2">
+            <div className="review-display-section">
+              <h4>{props.feedbackMessage}</h4>
+            </div>
+          </div>
+          {showInput && created===true ? null : (
+            <div className="review-change-button">
+              <button
+                onClick={() => {
+                  setShowInput(true);
+                }}
+              >
+                Reply
+              </button>
+            </div>
+          )}
+          {showInput && !created? (
+            <div className="review-reply-section">
+              <input type="text" onChange={(e)=>{setFeedback(e.target.value)}}/>
+              <button onClick={replySubmit}>Submit</button>
+            </div>
+          ) : null}
+          {
+            created?
+            <div className="reply-created">
+              <h4>Replied Successfully!</h4>
+              <h6>(Refresh to view your response.)</h6>
+            </div>
+            :null
+          }
+          <div className="reply-display-section">
+            {feedbackRes
+              ? feedbackRes.map((data, i) => (
+                  <div className="reply-display-section-box" key={i}>
+                    <Review
+                      key={i}
+                      userId={data.feedbackBy}
+                      feedbackMessage={data.feedback}
+                      feedbackId={data._id}
+                      hospId={props.hospId}
+                    />
+                  </div>
+                ))
+              : null}
           </div>
         </div>
-      </div>
-      : "LOADING"
-      }
-      
+      ) : null}
     </div>
   );
 }
+export default Review;

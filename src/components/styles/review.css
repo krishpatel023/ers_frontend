@@ -1,23 +1,102 @@
-/* .review-display-area {
-    margin-top: 160px;
-    margin-bottom: 160px;
-  } */
-  .review-display-card {
-    display: flex;
-    justify-content: center;
-    padding-top: 10px;
-    position: relative;
-  }
-  .review-display-card:hover {
-    transform: scale(1.1);
-  }
-  .user-style-card {
-    border: 1px solid white;
-    width: 500px;
-    padding: 10px;
-    box-shadow: 1px 1px 3px 1px rgb(194, 194, 194);
-  }
-  .review-textarea-card {
-    text-align: center;
-    padding-top: 40px;
-  }
+.review-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.review-box {
+  width: 80%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid black;
+}
+
+.review-section-1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-img-section {
+  width: 20%;
+}
+
+.review-img-section img {
+  width: 80%;
+}
+
+.review-name-section {
+  width: 80%;
+}
+
+.review-section-2 {
+  width: 100%;
+  font-size: 1rem;
+  padding-left: 1rem;
+}
+
+.reply-display-section {
+  width: 100%;
+}
+
+.review-change-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-change-button button {
+  width: 4rem;
+  height: 2rem;
+  font-size: 1rem;
+  background-color: rgb(42, 42, 157);
+  color: white;
+  transition: all 0.5s;
+}
+
+.review-change-button button:hover {
+  transform: scale(1.01);
+  transition: all 0.5s;
+  background-color: rgb(45, 45, 198);
+  color: white;
+}
+.review-reply-section{
+  width:100%;
+}
+.review-reply-section input{
+  width:80%;
+  height:2rem;
+  padding-left: 1rem;
+}
+.review-reply-section button{
+  width:20%;
+  height:2rem;
+  font-size: 1rem;
+  background-color: rgb(42, 42, 157);
+  color: white;
+  transition: all 0.5s;
+  border: none;
+}
+.review-reply-section button:hover {
+  transform: scale(1.01);
+  transition: all 0.5s;
+  background-color: rgb(45, 45, 198);
+  color: white;
+  border: none;
+}
+.reply-created{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+} 
+.reply-created h4{
+  color: green;
+}

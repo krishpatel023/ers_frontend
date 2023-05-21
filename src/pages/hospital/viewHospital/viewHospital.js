@@ -1,23 +1,23 @@
-// import './viewHospital.css'
+import './viewHospital.css'
+import Footer from '../../../components/footer'
 import Header from '../../../components/header'
+
+import star from '../../../assets/favorite.png'
+import img2 from "../../../assets/placeholder.png";
+import img6 from "../../../assets/contact-us.png";
+import Review from '../../../components/Review';
 import {useEffect, useState} from "react"
 import axios from 'axios'
 import {Link, useNavigate,useParams} from 'react-router-dom'
-
-import React from "react";
-import "./viewHospital.css";
-import img2 from "../../../assets/placeholder.png";
-import img3 from "../../../assets/architecture-and-city.png";
-import img5 from "../../../assets/hospital-bed.png";
-import img6 from "../../../assets/contact-us.png";
-import Review from "../../../components/Review";
 import { config, backendURL } from '../../../utils';
-export default function HospitalCard() {
-    const [message, setMessage] = useState()
+import { useCookies } from 'react-cookie'
+
+
+function ViewHospital(){
     const [dataBase,setDatabase] = useState()
     const [feedbackDB,setFeedbackDB] = useState()
     const { id } = useParams();
-
+    const [cookies, setCookie, removeCookie] = useCookies(['user']);
     //===============REDIRECTION==============================
     const navigate = useNavigate()
     function redirectLogin(req,res,next){
@@ -25,6 +25,7 @@ export default function HospitalCard() {
             if(req.error){
             navigate('/login')
             }
+
         }catch(error){
             console.log(error)
         }
@@ -33,6 +34,9 @@ export default function HospitalCard() {
     useEffect(()=>{
         axios.get(`${backendURL}/api/hospitals/${id}`,config)
             .then(function(response){
+                if(!cookies.access_token){
+                    navigate('/login')
+                }
                 setDatabase(response.data)
             })
             .catch(function(error){
@@ -52,131 +56,78 @@ export default function HospitalCard() {
     const handleClick = ()=>{
         navigate(-1);
     }
-  return (
-    <>
-        <div className="view-hospital-wrapper">
-
-        
-        <Header/>
-        {
-            dataBase?
-            <div
-                style={{
-                paddingTop: "40px",
-                paddingBottom: "40px",
-                display: "flex",
-                justifyContent: "center",
-                }}
-            >
-                <div className="Hos-Main">
-                <div className="HospitalCard">
-                    <img
-                    src={dataBase.img}
-                    alt="#"
-                    style={{ height: "400px", width: "700px" }}
-                    />
+    return (
+      <div className="view-hospital-wrapper">
+        <Header />
+        {dataBase ? (
+          <div className="view-hospital-main">
+            <div className="view-hospital-box">
+              <div className="view-hospital-back">
+                <button>
+                  <h1>
+                    <i className="fi fi-rr-arrow-left"></i>
+                  </h1>
+                </button>
+              </div>
+              <div className="view-hospital-img-box">
+                <img src={dataBase.img} alt="" />
+              </div>
+              <div className="view-hospital-details">
+                <div className="view-hospital-details-box">
+                  <h1>{dataBase.name}</h1>
+                  <h2>
+                    {dataBase.city}, {dataBase.state}
+                  </h2>
+                  <h3>
+                    <img src={img2} alt="" style={{ width: "15px" }} />{" "}
+                    {dataBase.address}
+                  </h3>
+                  <a href="#">
+                    <i className="fi fi-ss-map-marker"></i> View on Map
+                  </a>
+                  <h3>
+                    <i className="fi fi-sr-procedures"></i> Available Beds :{" "}
+                    {dataBase.available}
+                  </h3>
+                  <h3>
+                    <i className="fi fi-ss-star"></i> Rating : 4{" "}
+                    <img src={star} alt="" style={{ width: "15px" }} />
+                  </h3>
+                  <h3>
+                    <img src={img6} alt="" style={{ width: "15px" }} /> Contact
+                    : {dataBase.phone}
+                  </h3>
                 </div>
-                <div>
-                    <h1 className="hosname-card" style={{ paddingLeft: "20px" }}>
-                    {dataBase.name}
-                    </h1>
-                    <div style={{ paddingLeft: "20px", paddingTop: "30px"}}>
-                    <div style={{ display: "flex", fontSize: "20px" }}>
-                        <img src={img2} alt="#" className="logo-style" />
-                        <b className="address-card">
-                        {dataBase.address}
-                        </b>
-                    </div>
-                    <div style={{ display: "flex" }}>
-                        <div
-                        style={{
-                            display: "flex",
-                            marginTop: "10px",
-                            fontSize: "20px",
-                            paddingLeft: "2px",
-                        }}
-                        >
-                        <img src={img3} alt="#" className="logo-style" />
-                        <b className="city-card">{dataBase.city}, {dataBase.state}</b>
-                        </div>
-                    </div>
-                    <div style={{ display: "flex", marginTop: "30px" }}>
-                        <div
-                        style={{
-                            display: "flex",
-                            marginTop: "10px",
-                            fontSize: "20px",
-                            paddingLeft: "2px",
-                        }}
-                        >
-                        <img src={img5} alt="#" className="logo-style" />
-                        <b style={{ paddingRight: "5px" }}> Total Beds : </b>
-                        <b className="totalbeds-card">{dataBase.available}</b>
-                        </div>
-                        <div
-                        style={{
-                            display: "flex",
-                            marginTop: "10px",
-                            fontSize: "20px",
-                            paddingLeft: "90px",
-                        }}
-                        >
-                        <img src={img5} alt="#" className="logo-style" />
-                        <b style={{ paddingRight: "5px" }}>Available : </b>
-                        <b className="available-card">300</b>
-                        </div>
-                    </div>
-
-                    <div
-                        style={{
-                        display: "flex",
-                        marginTop: "60px",
-                        fontSize: "20px",
-                        paddingLeft: "2px",
-                        }}
-                    >
-                        <img src={img6} alt="#" className="logo-style" />
-                        <b style={{ paddingRight: "5px" }}>Contact : </b>
-                        <b className="contact-card">{dataBase.phone}</b>
-                    </div>
-                    </div>
-                    <div
-                    style={{
-                        textAlign: "center",
-                    }}
-                    >
-                    <div className="contactbut">
-                        <a href="tel:987654321">Call Us!</a>
-                    </div>
-                    </div>
-
-                    <div className="review-display-area">
-                    <h2 style={{ textAlign: "center" }}>Reviews</h2>
-                    {
-                        feedbackDB?
-                        feedbackDB.map((data,i)=>
+              </div>
+              <div className="view-hospital-call-us"></div>
+              <div className="view-hospital-reviews">
+                <h1>REVIEWS</h1>
+                {feedbackDB
+                  ? feedbackDB.map((data, i) => (
+                      <div className="view-hospital-reviews-box" key={i}>
                         <Review
-                            key={i}
-                            userId={data.feedbackBy}
-                            feedbackMessage={data.feedback}
-                            rating={data.rating}
-                            // profileImg={profileImg}
-                        />                        
-                        )
-                        : "NO REVIEWS AVAILABLE"                       
-                    }
-                    </div>
-                    <div style={{ textAlign: "center", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
-                        <div className="adjustment-btn rate-us-card1">
-                            <Link to={`/feedback/${id}`} style={{color:"white "}} className='Link-Universal'>Rate Us Now!!</Link>
-                        </div>
-                    </div>
-                </div>
-                </div>
+                          key={i}
+                          feedbackId={data._id}
+                          userId={data.feedbackBy}
+                          feedbackMessage={data.feedback}
+                          rating={data.rating}
+                          hospId={id}
+                        />
+                      </div>
+                    ))
+                  : "NO REVIEWS AVAILABLE"}
+              </div>
+              <div className="view-hospital-review-submit">
+                <button>Rate Us Now!!!</button>
+              </div>
             </div>
-            : "LOADING"
-        }
-        </div>
-    </>
-  );
+          </div>
+        ) : (
+          "LOADING"
+        )}
+
+        <Footer />
+      </div>
+    );
 }
+export default ViewHospital
