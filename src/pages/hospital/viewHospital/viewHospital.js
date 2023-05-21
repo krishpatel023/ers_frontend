@@ -63,7 +63,7 @@ function ViewHospital(){
           <div className="view-hospital-main">
             <div className="view-hospital-box">
               <div className="view-hospital-back">
-                <button>
+                <button onClick={navigate(-1)}>
                   <h1>
                     <i className="fi fi-rr-arrow-left"></i>
                   </h1>
@@ -118,7 +118,7 @@ function ViewHospital(){
                   : "NO REVIEWS AVAILABLE"}
               </div>
               <div className="view-hospital-review-submit">
-                <button>Rate Us Now!!!</button>
+                <button onClick={navigate(`/feedback/${id}`)}>Rate Us Now!!!</button>
               </div>
             </div>
           </div>
