@@ -87,7 +87,7 @@ function ViewHospital(){
                   </a>
                   <h3>
                     <i className="fi fi-sr-procedures"></i> Available Beds :{" "}
-                    {dataBase.available}
+                    {dataBase.beds}
                   </h3>
                   <h3>
                     <i className="fi fi-ss-star"></i> Rating : 4{" "}

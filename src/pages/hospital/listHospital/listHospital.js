@@ -61,8 +61,8 @@ export default function Profile() {
                     <div style={{ display: "flex" }}>
                         <div>
                         </div>
-                        <div> <i class="fi fi-sr-procedures"></i> {data.materials[0]?.name} :</div>
-                        <div className="totalbeds">{data.materials[0]?.available}</div>
+                        <div> <i class="fi fi-sr-procedures"></i> Beds :</div>
+                        <div className="totalbeds">{data.beds}</div>
                     </div>
                     <div style={{ display: "flex" }}>
                         <div><i class="fi fi-sr-phone-call"></i> Contact : </div>
