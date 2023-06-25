@@ -23,6 +23,8 @@ import Feedback from './pages/feedback/feedback'
 import UserDashboard from './pages/userDadhboard/Dashboard'
 import Resources from './pages/resources/Resources'
 import About from './pages/about/about';
+import AdminLogin from './pages/adminHospital/login';
+import AdminHospEdit from './pages/adminHospital/hospitalEdit'
 // import { CookiesProvider } from 'react-cookie';
 function App() {
   return (
@@ -57,6 +59,11 @@ function App() {
             <Route path="editHospital/:id" element={<AdminEditHospital/>} />
           </Route>
           <Route path="feedback" element={<AdminFeedbacks />} />
+        </Route>
+
+        <Route path="/hospitalAdmin" >
+          <Route path="login" element={<AdminLogin />} />
+          <Route path="edit/:id" element={<AdminHospEdit />} />
         </Route>
         <Route path="*" element={<NoPage/>}/>
       </Routes>

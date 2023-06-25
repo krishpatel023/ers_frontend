@@ -61,13 +61,7 @@ function AdminCreateHospital(){
             ratings : 0,
             img: imgData,
             address: Address,
-            materials: [
-                {   
-                    name : "Beds",
-                    total : Beds,
-                    available : Beds
-                }
-            ]
+            beds:Beds,
         },config)
             .then(function(response){
                 setMessage(response.data)
