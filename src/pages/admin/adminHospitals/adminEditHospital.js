@@ -117,9 +117,9 @@ function AdminEditHospital(){
                     </div>
                     <div className="edit-hospital-input-details-3">
                         {
-                            dataBase.materials[0] ? <div>
+                            dataBase.beds ? <div>
                             <label htmlFor='beds' className="input-hospital-adjust">No. of Beds</label>
-                            <input type="number" name="beds" id="beds" defaultValue={dataBase.materials[0].beds} onChange={(e)=>{setBeds(e.target.value)}}/></div>
+                            <input type="number" name="beds" id="beds" defaultValue={dataBase.beds} onChange={(e)=>{setBeds(e.target.value)}}/></div>
                             : null
                         }
                         <input type="file"accept="image/*" onChange={(e)=>{convertImage(e.target.files[0])}}/>
