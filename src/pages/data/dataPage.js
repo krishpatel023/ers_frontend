@@ -78,14 +78,14 @@ function DataPage() {
           </div>
           <div className="search">
             <div className="abovesearch">
-              EXPLORE STATEWISE DATA OF COVID-19 CASES
+              <h2>EXPLORE STATEWISE DATA OF COVID-19 CASES</h2>
             </div>
-            <div className="search-form">
+            {/* <div className="search-form">
               <form action="#">
                 <input type="text" placeholder="  Search.." name="search" />
                 <button type="submit">&#128269;</button>
               </form>
-            </div>
+            </div> */}
           </div>
           {dataBase[0].statewise.map((data, i) => (
             <div className="state" key={i}>

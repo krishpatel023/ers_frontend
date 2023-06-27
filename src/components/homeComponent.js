@@ -3,7 +3,9 @@ import {Link} from 'react-router-dom'
 import NewsComp from "./NewsComp";
 import FeedbackHome from "./FeedbackHome";
 import HomeQuote from './HomeQuote'
-export default function homeComponent() {
+import {useNavigate} from 'react-router-dom'
+export default function HomeComponent() {
+  const navigate = useNavigate()
   return (
     <>
       <div className="home-main">
@@ -11,6 +13,9 @@ export default function homeComponent() {
       </div>
       <div className="top-headlines-home">
         <h1>TOP HEADLINES!!</h1>
+        <div className="more-news-btn-wrapper">
+          <button onClick={()=>{navigate("/newsPage")}}>Read More {">"}</button>
+        </div>
         <div className="top-heaglines-card-flex">
           <NewsComp />
           <NewsComp />

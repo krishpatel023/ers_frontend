@@ -29,12 +29,13 @@ function Login(){
     return(
         <div className="login-wrapper">
             <div className="login-box">
-                <h2>LOGIN</h2>
+                <h2>USER LOGIN</h2>
                 <input type="email" placeholder='E-mail' onChange={(e)=>{setEmail(e.target.value)}}/>
                 <input type="password" placeholder='Password' onChange={(e)=>{setPassword(e.target.value)}}/>
                 <button onClick={()=>{handleSubmit()}}>LOGIN</button>
                 <span>{Message?Message:null}</span>
                 <span>Don't have an account? <Link to="/register" className='Link-Universal'>Register</Link></span>
+                <span>Login as hospital Admin? <Link to="/hospitalAdmin/login" className='Link-Universal'>Hospital Login</Link></span>
             </div>
         </div>
     )

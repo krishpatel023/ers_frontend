@@ -75,6 +75,25 @@
   background-color: white;
   color: rgb(82, 82, 82);
 }
+.more-news-btn-wrapper{
+  width:100%;
+  height:3rem;
+    display: flex;
+  justify-content: end;
+  align-items: center;
+ background-color: rgb(240, 240, 240);
+
+}
+.more-news-btn-wrapper button{
+  margin-right: 1rem;
+  margin-top: 1rem;
+  width:6rem;
+  height:2rem;
+  border-radius: 0.5rem;
+  background-color: var(--primary-color1);
+  border: none;
+  color: white;
+}
 @media only screen and (max-width: 900px) {
   .reviews-display-home {
     flex-direction: column;
